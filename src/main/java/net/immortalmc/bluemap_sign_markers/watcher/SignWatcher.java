@@ -7,7 +7,6 @@ import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import net.immortalmc.bluemap_sign_markers.FeatureProvider;
-import net.immortalmc.bluemap_sign_markers.helpers.MarkerIcon;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.block.Block;
@@ -68,24 +67,27 @@ public class SignWatcher implements Listener {
      */
     @EventHandler
     public void onSignWrite(SignChangeEvent event) {
-
-        String iconLabel;
-        MarkerIcon markerIcon;
+        String iconName;
 
         // ### Mapping sign's line 0 to specific marker type (translates to icon)
         final String line0 = event.getLine(0);
         if (line0 != null && !line0.isBlank() && line0.startsWith("[") && line0.endsWith("]")) {
-            markerIcon = MarkerIcon.match(line0);
-            iconLabel = markerIcon.name();
+            String rawIconName = line0.replaceAll("^\\[(.*)]$", "$1").toLowerCase();
+            String iconFileName =  IMAGE_PATH + rawIconName + ".png";
+            File tmpIconFile = new File(featureProvider.getWebRoot() + "/" + iconFileName);
+            
+            if (tmpIconFile.exists()) {
+                iconName = rawIconName;
+            } else {
+                iconName = "ban_white.png";
+                
+            };
         } else {
             return;
-        }
-
-
-        // ### Getting the actual image file for a marker
-        String icon = IMAGE_PATH + iconLabel + ".png";
+        };
+        String icon = IMAGE_PATH + iconName;
         File iconFile = new File(featureProvider.getWebRoot() + "/" + icon);
-        if (!iconFile.exists()) return;
+        
 
         Vector2i anchor;
         try {
@@ -127,7 +129,7 @@ public class SignWatcher implements Listener {
 
         // ### Replace first line, with prefix, e.g. [map], to <marker> indicator
         event.setLine(0, MARKER_PLACEHOLDER);
-        event.getPlayer().sendMessage(formatMessage(String.format(ADDED_TEMPLATE, markerIcon.name(), pos.getFloorX(), pos.getFloorY(), pos.getFloorZ())));
+        event.getPlayer().sendMessage(formatMessage(String.format(ADDED_TEMPLATE, iconName, pos.getFloorX(), pos.getFloorY(), pos.getFloorZ())));
     }
 
     /**
