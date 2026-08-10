@@ -13,7 +13,7 @@ public class Constants {
     /**
      * Resource folder inside the plugin JAR where marker images are located.
      */
-    public static final String RES_FOLDER = IMAGE_PATH + "dynmap";
+    public static final String RES_FOLDER = IMAGE_PATH + "icons";
     /**
      * Prefix used when creating per-world marker set filenames.
      */

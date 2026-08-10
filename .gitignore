@@ -36,3 +36,5 @@ thumbs.db
 log/
 *.log
 temp/
+
+bin
