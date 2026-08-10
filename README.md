@@ -34,7 +34,7 @@ It does not matter if you use lowercase or uppercase. The plugin will handle it.
 | `ban_magenta`    | ![ban_magenta](src/main/resources/markers/icons/ban_magenta.png)        |     | `treasure_x`      | ![treasure_x](src/main/resources/markers/icons/treasure_x.png)           |
 | `ban_orange`     | ![ban_orange](src/main/resources/markers/icons/ban_orange.png)          |     | `tree`            | ![tree](src/main/resources/markers/icons/tree.png)                       |
 | `ban_pink`       | ![ban_pink](src/main/resources/markers/icons/ban_pink.png)              |     | `trial`           | ![trial](src/main/resources/markers/icons/trial.png)                     |
-| `ban_purple`     | ![ban_purple](src/main/resources/markers/icons/ban_purpl.png)           |     | `village_desert`  | ![village_desert](src/main/resources/markers/icons/village_desert.png)   |
+| `ban_purple`     | ![ban_purple](src/main/resources/markers/icons/ban_purple.png)          |     | `village_desert`  | ![village_desert](src/main/resources/markers/icons/village_desert.png)   |
 | `ban_red`        | ![ban_red](src/main/resources/markers/icons/ban_red.png)                |     | `village_plains`  | ![village_plains](src/main/resources/markers/icons/village_plains.png)   |
 | `ban_white`      | ![ban_white](src/main/resources/markers/icons/ban_white.png)            |     | `village_savanna` | ![village_savanna](src/main/resources/markers/icons/village_savanna.png) |
 | `ban_yellow`     | ![ban_yellow](src/main/resources/markers/icons/ban_yellow.png)          |     | `village_snow`    | ![village_snow](src/main/resources/markers/icons/village_snow.png)       |
