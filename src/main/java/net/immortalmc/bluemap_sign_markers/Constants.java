@@ -4,9 +4,7 @@ package net.immortalmc.bluemap_sign_markers;
  * Common constants used across the plugin.
  */
 public class Constants {
-    /** Modrinth plugin slug used for update checks. */
-    public static final String MODRINTH_SLUG = "easy-bluemap-sign-markers";
-    /**
+    /** 
      * Relative path inside BlueMap webroot where marker images are stored.
      */
     public static final String IMAGE_PATH = "markers/";
@@ -45,7 +43,7 @@ public class Constants {
     /**
     * Placeholder text used in marker labels to indicate where the marker text goes.
      */
-    public final static String MARKER_PLACEHOLDER = "> marker <";
+    public final static String MARKER_PLACEHOLDER = "> map marker <";
 
     /**
      * MiniMessage template used for player messages. Argument: marker text.

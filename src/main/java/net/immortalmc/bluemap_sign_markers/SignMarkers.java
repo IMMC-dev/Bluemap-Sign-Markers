@@ -4,7 +4,6 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import net.immortalmc.bluemap_sign_markers.helpers.IconHelper;
 import net.immortalmc.bluemap_sign_markers.helpers.MarkerHelper;
-import net.immortalmc.bluemap_sign_markers.helpers.UpdateNotifier;
 import net.immortalmc.bluemap_sign_markers.watcher.SignWatcher;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -17,8 +16,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.jar.JarFile;
 import java.util.logging.Logger;
-
-import static net.immortalmc.bluemap_sign_markers.Constants.MODRINTH_SLUG;
 
 /**
  * Main plugin handling sign markers for BlueMap.
@@ -63,7 +60,6 @@ public class SignMarkers extends JavaPlugin implements FeatureProvider {
     @Override
     public void onEnable() {
         logger = getLogger();
-        new UpdateNotifier(this, MODRINTH_SLUG).checkForUpdates();
         markerHelper = new MarkerHelper(this);
         BlueMapAPI.onEnable(api -> {
                     try {
