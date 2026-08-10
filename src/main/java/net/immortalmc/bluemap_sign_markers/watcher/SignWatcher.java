@@ -79,13 +79,13 @@ public class SignWatcher implements Listener {
             if (tmpIconFile.exists()) {
                 iconName = rawIconName;
             } else {
-                iconName = "ban_white.png";
+                iconName = "ban_white";
                 
             };
         } else {
             return;
         };
-        String icon = IMAGE_PATH + iconName;
+        String icon = IMAGE_PATH + iconName + ".png";
         File iconFile = new File(featureProvider.getWebRoot() + "/" + icon);
         
 

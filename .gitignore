@@ -37,4 +37,5 @@ log/
 *.log
 temp/
 
-bin
+bin/
+bin/*

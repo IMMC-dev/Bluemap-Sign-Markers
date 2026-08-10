@@ -50,7 +50,7 @@ public class Constants {
     /**
      * MiniMessage template used for player messages. Argument: marker text.
      */
-    public final static String MSG_PREFIX = "<green>[EasyBMSignMarkers] %s</green>";
+    public final static String MSG_PREFIX = "<red>[IMMC-SignMarkers]<red> <yellow>%s</yellow>";
     /**
      * HTML template used as the marker detail content. The first three string placeholders
      * are used for the three label lines. Subsequent placeholders are used for X, Y, Z,
@@ -64,15 +64,15 @@ public class Constants {
                 font-family: sans-serif;
                 min-width: 170px;
             '>
-            <div style='border-style: dashed; border-width: 2px; border-color: #565656; padding: 5px; margin-bottom: 10px'>
-                            <div style='color: #c0c0c0; font-size: 1.1em;'>%s</div>
-                            <div style='color: #c0c0c0; font-size: 1.1em;'>%s</div>
-                            <div style='color: #c0c0c0; font-size: 1.1em;'>%s</div>
+            <div style='border-style: dashed; border-width: 2px; border-color: #727272; padding: 5px; margin-bottom: 10px'>
+                            <div style='color: #727272; font-size: 1.1em;'>%s</div>
+                            <div style='color: #727272; font-size: 1.1em;'>%s</div>
+                            <div style='color: #727272; font-size: 1.1em;'>%s</div>
                             </div>
-                <div style='color: #565656; font-size: 0.7em;'>position (x y z)</div>
-                <div style='color: #c0c0c0; font-size: 0.8em;'>%d %d %d</div>
-                <div style='color: #565656; font-size: 0.7em;'>created %s</div>
-                <div style='color: #c0c0c0; font-size: 0.8em;'>by %s</div>
+                <div style='color: #727272; font-size: 0.7em;'>position (x y z)</div>
+                <div style='color: #727272; font-size: 0.8em;'>%d %d %d</div>
+                <div style='color: #727272; font-size: 0.7em;'>created %s</div>
+                <div style='color: #727272; font-size: 0.8em;'>by %s</div>
             </div>
             """;
 }
