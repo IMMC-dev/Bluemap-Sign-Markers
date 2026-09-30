@@ -3,8 +3,8 @@ plugins {
     id("com.gradleup.shadow") version "9.2.2"
 }
 
-group = "net.immortalmc.net"
-version = "1.0.0"
+group = "net.immortalmc"
+version = "1.0.1"
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(25))
@@ -21,8 +21,8 @@ repositories {
 dependencies {
     implementation("net.kyori:adventure-text-minimessage:4.26.1")
     implementation("net.kyori:adventure-text-serializer-legacy:4.26.1")
-    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
-    compileOnly("de.bluecolored:bluemap-api:2.8.0")
+    compileOnly("io.papermc.paper:paper-api:26.3.build.+")
+    compileOnly("de.bluecolored:bluemap-api:2.8.1")
 }
 
 tasks.compileJava {
